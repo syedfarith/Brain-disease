@@ -89,12 +89,12 @@ import streamlit as st
 from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
-
+from keras import models
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
 # Load the model
-model = load_model("keras_Model.h5", compile=False)
+model = models.load_model("keras_Model.h5", compile=False)
 
 # Load the labels
 class_names = open("labels.txt", "r").readlines()
