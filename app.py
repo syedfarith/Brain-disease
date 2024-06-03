@@ -148,11 +148,14 @@ from keras import models
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
+model_path = "C:/Users/syedf/OneDrive/Desktop/converted_keras/keras_model.h5"
+labels_path = "C:/Users/syedf/OneDrive/Desktop/converted_keras/labels.txt"
+
 # Load the model
-model = models.load_model("keras_Model.h5", compile=False)
+model = models.load_model(model_path, compile=False)
 
 # Load the labels
-class_names = open("labels.txt", "r").readlines()
+class_names = open(labels_path, "r").readlines()
 
 # Streamlit app title
 st.title("Brain Disease Classification and Information")
